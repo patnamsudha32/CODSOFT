@@ -9,7 +9,7 @@ public class NumberGuessingGame {
         int score = 0;
         String playAgain;
 
-        System.out.println("🎯 Welcome to the Number Guessing Game!");
+        System.out.println("Welcome to the Number Guessing Game!");
 
         do {
             int numberToGuess = rand.nextInt(100) + 1; // 1 to 100
@@ -23,7 +23,7 @@ public class NumberGuessingGame {
                 int guess = sc.nextInt();
 
                 if (guess == numberToGuess) {
-                    System.out.println("🎉 Correct! You've guessed the number.");
+                    System.out.println(" Correct! You've guessed the number.");
                     isGuessed = true;
                     score++;
                     break;
@@ -35,7 +35,7 @@ public class NumberGuessingGame {
             }
 
             if (!isGuessed) {
-                System.out.println("😞 Out of attempts! The correct number was: " + numberToGuess);
+                System.out.println(" Out of attempts! The correct number was: " + numberToGuess);
             }
 
             System.out.print("Do you want to play another round? (yes/no): ");
@@ -43,7 +43,7 @@ public class NumberGuessingGame {
 
         } while (playAgain.equals("yes"));
 
-        System.out.println("\n🏁 Game Over! Your final score: " + score);
+        System.out.println("\nGame Over! Your final score: " + score);
         System.out.println("Thanks for playing!");
 
         sc.close();
